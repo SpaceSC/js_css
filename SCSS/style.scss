@@ -16,33 +16,33 @@ body {
     position: fixed;
     color: #414242;
     font-size: 48px;
+    font-weight: 900;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     transform-origin: 0 0;
   }
 
-  h1 {
-    font-weight: 900;
-  }
-
   p {
     font-weight: 100;
+    color: #f06c6c;
   }
-
-#root.clicked p {
-
-  animation: pRotation 2s infinite linear;
-
 }
 
 #root.clicked h1 {
 
-  animation: h1Rotation 2s infinite linear;
+  animation: h1AndPRotation 2s infinite linear;
 
 }
 
-@keyframes pRotation {
+#root.clicked p {
+
+  animation: h1AndPRotation 2s infinite linear;
+  animation-direction: reverse;
+
+}
+
+@keyframes h1AndPRotation {
   from {
     transform: rotate(0deg) translate(-50%, -50%);
   }
@@ -51,7 +51,8 @@ body {
   }
 }
 
-@keyframes h1Rotation {
+/* reverse helyett így lenne
+@keyframes pRotation {
   from {
     transform: rotate(0deg) translate(-50%, -50%);
   }
@@ -59,4 +60,4 @@ body {
     transform: rotate(-359deg) translate(-50%, -50%);
   }
 }
-
+*/

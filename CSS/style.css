@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap");
 *,
 *::before,
@@ -16,8 +17,8 @@ body {
 body h1, body p {
   position: fixed;
   color: #414242;
-  font-weight: 900;
   font-size: 48px;
+  font-weight: 900;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -26,17 +27,23 @@ body h1, body p {
           transform-origin: 0 0;
 }
 
-#root.clicked p {
-  -webkit-animation: pRotation 2s infinite linear;
-          animation: pRotation 2s infinite linear;
+body p {
+  font-weight: 100;
+  color: #f06c6c;
 }
 
 #root.clicked h1 {
-  -webkit-animation: h1Rotation 2s infinite linear;
-          animation: h1Rotation 2s infinite linear;
+  -webkit-animation: h1AndPRotation 2s infinite linear;
+          animation: h1AndPRotation 2s infinite linear;
 }
 
-@-webkit-keyframes pRotation {
+#root.clicked p {
+  -webkit-animation: h1AndPRotation 2s infinite linear;
+          animation: h1AndPRotation 2s infinite linear;
+  animation-direction: reverse;
+}
+
+@-webkit-keyframes h1AndPRotation {
   from {
     -webkit-transform: rotate(0deg) translate(-50%, -50%);
             transform: rotate(0deg) translate(-50%, -50%);
@@ -47,36 +54,25 @@ body h1, body p {
   }
 }
 
+@keyframes h1AndPRotation {
+  from {
+    -webkit-transform: rotate(0deg) translate(-50%, -50%);
+            transform: rotate(0deg) translate(-50%, -50%);
+  }
+  to {
+    -webkit-transform: rotate(359deg) translate(-50%, -50%);
+            transform: rotate(359deg) translate(-50%, -50%);
+  }
+}
+
+/* reverse helyett így lenne
 @keyframes pRotation {
   from {
-    -webkit-transform: rotate(0deg) translate(-50%, -50%);
-            transform: rotate(0deg) translate(-50%, -50%);
+    transform: rotate(0deg) translate(-50%, -50%);
   }
   to {
-    -webkit-transform: rotate(359deg) translate(-50%, -50%);
-            transform: rotate(359deg) translate(-50%, -50%);
+    transform: rotate(-359deg) translate(-50%, -50%);
   }
 }
-
-@-webkit-keyframes h1Rotation {
-  from {
-    -webkit-transform: rotate(0deg) translate(-50%, -50%);
-            transform: rotate(0deg) translate(-50%, -50%);
-  }
-  to {
-    -webkit-transform: rotate(-359deg) translate(-50%, -50%);
-            transform: rotate(-359deg) translate(-50%, -50%);
-  }
-}
-
-@keyframes h1Rotation {
-  from {
-    -webkit-transform: rotate(0deg) translate(-50%, -50%);
-            transform: rotate(0deg) translate(-50%, -50%);
-  }
-  to {
-    -webkit-transform: rotate(-359deg) translate(-50%, -50%);
-            transform: rotate(-359deg) translate(-50%, -50%);
-  }
-}
+*/
 /*# sourceMappingURL=style.css.map */
