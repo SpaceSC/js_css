@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap");
 *,
 *::before,
 *::after {
@@ -9,13 +10,28 @@
 
 body {
   background-color: #BBEED8;
+  font-family: 'Roboto', sans-serif;
 }
 
 body h1 {
+  position: fixed;
   color: #414242;
+  font-weight: 900;
+  font-size: 48px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 body p {
+  position: fixed;
   color: #eca7a7;
+  font-weight: 100;
+  font-size: 48px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 /*# sourceMappingURL=style.css.map */
