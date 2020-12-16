@@ -13,7 +13,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-body h1 {
+body h1, body p {
   position: fixed;
   color: #414242;
   font-weight: 900;
@@ -22,16 +22,61 @@ body h1 {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
 }
 
-body p {
-  position: fixed;
-  color: #eca7a7;
-  font-weight: 100;
-  font-size: 48px;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+#root.clicked p {
+  -webkit-animation: pRotation 2s infinite linear;
+          animation: pRotation 2s infinite linear;
+}
+
+#root.clicked h1 {
+  -webkit-animation: h1Rotation 2s infinite linear;
+          animation: h1Rotation 2s infinite linear;
+}
+
+@-webkit-keyframes pRotation {
+  from {
+    -webkit-transform: rotate(0deg) translate(-50%, -50%);
+            transform: rotate(0deg) translate(-50%, -50%);
+  }
+  to {
+    -webkit-transform: rotate(359deg) translate(-50%, -50%);
+            transform: rotate(359deg) translate(-50%, -50%);
+  }
+}
+
+@keyframes pRotation {
+  from {
+    -webkit-transform: rotate(0deg) translate(-50%, -50%);
+            transform: rotate(0deg) translate(-50%, -50%);
+  }
+  to {
+    -webkit-transform: rotate(359deg) translate(-50%, -50%);
+            transform: rotate(359deg) translate(-50%, -50%);
+  }
+}
+
+@-webkit-keyframes h1Rotation {
+  from {
+    -webkit-transform: rotate(0deg) translate(-50%, -50%);
+            transform: rotate(0deg) translate(-50%, -50%);
+  }
+  to {
+    -webkit-transform: rotate(-359deg) translate(-50%, -50%);
+            transform: rotate(-359deg) translate(-50%, -50%);
+  }
+}
+
+@keyframes h1Rotation {
+  from {
+    -webkit-transform: rotate(0deg) translate(-50%, -50%);
+            transform: rotate(0deg) translate(-50%, -50%);
+  }
+  to {
+    -webkit-transform: rotate(-359deg) translate(-50%, -50%);
+            transform: rotate(-359deg) translate(-50%, -50%);
+  }
 }
 /*# sourceMappingURL=style.css.map */

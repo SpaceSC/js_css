@@ -8,7 +8,7 @@ let myObjects = [
     },
     {
     tag:"p", 
-    content:"Lorem ipsum"
+    content:"Frontend developer"
     }
   ];
 
@@ -26,6 +26,11 @@ let myRoot = document.getElementById("root");
    `
    );
  }
+
+ myRoot.addEventListener("click", function(){
+   root.classList.toggle("clicked");
+
+ });
 
 }
 
