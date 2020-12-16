@@ -10,4 +10,12 @@
 body {
   background-color: #BBEED8;
 }
+
+body h1 {
+  color: #414242;
+}
+
+body p {
+  color: #eca7a7;
+}
 /*# sourceMappingURL=style.css.map */
